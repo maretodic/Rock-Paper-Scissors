@@ -32,14 +32,12 @@
             this.paper_btn = new System.Windows.Forms.Button();
             this.scissors_btn = new System.Windows.Forms.Button();
             this.restart_btn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pc_score_label = new System.Windows.Forms.Label();
             this.player_score_label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pc_choice_label = new System.Windows.Forms.Label();
             this.player_choice_label = new System.Windows.Forms.Label();
             this.result_label = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // rock_btn
@@ -84,16 +82,6 @@
             this.restart_btn.Text = "Restart game";
             this.restart_btn.UseVisualStyleBackColor = true;
             this.restart_btn.Click += new System.EventHandler(this.restart_btn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(586, 220);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 29);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "PC";
             // 
             // pc_score_label
             // 
@@ -155,29 +143,17 @@
             this.result_label.TabIndex = 10;
             this.result_label.Text = "RESULT";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(150, 220);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 29);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "YOU";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.result_label);
             this.Controls.Add(this.player_choice_label);
             this.Controls.Add(this.pc_choice_label);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.player_score_label);
             this.Controls.Add(this.pc_score_label);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.restart_btn);
             this.Controls.Add(this.scissors_btn);
             this.Controls.Add(this.paper_btn);
@@ -195,14 +171,12 @@
         private System.Windows.Forms.Button paper_btn;
         private System.Windows.Forms.Button scissors_btn;
         private System.Windows.Forms.Button restart_btn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label pc_score_label;
         private System.Windows.Forms.Label player_score_label;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label pc_choice_label;
         private System.Windows.Forms.Label player_choice_label;
         private System.Windows.Forms.Label result_label;
-        private System.Windows.Forms.Label label8;
     }
 }
 

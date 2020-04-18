@@ -12,6 +12,9 @@ namespace GameRockPaperScissors
 {
     public partial class Form1 : Form
     {
+        private static int Scissors = 1;
+        private static int Paper = 2;
+        private static int Rock = 3;
         public Form1()
         {
             InitializeComponent();
@@ -20,28 +23,17 @@ namespace GameRockPaperScissors
         private int _playerScore, _pcScore;
         private void scissors_btn_Click(object sender, EventArgs e)
         {
-            playRound(1);
+            playRound(Scissors);
         }
 
         private void paper_btn_Click(object sender, EventArgs e)
         {
-            playRound(2);
+            playRound(Paper);
         }
 
         private void rock_btn_Click(object sender, EventArgs e)
         {
-            playRound(3);
-        }
-
-        private void restart_btn_Click(object sender, EventArgs e)
-        {
-            _pcScore = default;
-            _playerScore = default;
-            pc_score_label.Text = _pcScore.ToString();
-            player_score_label.Text = _playerScore.ToString();
-            result_label.Text = "RESULT";
-            player_choice_label.Text = "YOU";
-            pc_choice_label.Text = "PC";
+            playRound(Rock);
         }
 
         private void playRound(int playerSelection)
@@ -61,13 +53,13 @@ namespace GameRockPaperScissors
             switch (playerSelection)
             {
                 case 1:
-                    UpdateScore(pcSelection == 2);
+                    UpdateScore(pcSelection == Paper);
                     break;
                 case 2:
-                    UpdateScore(pcSelection == 3);
+                    UpdateScore(pcSelection == Rock);
                     break;
                 case 3:
-                    UpdateScore(pcSelection == 1);
+                    UpdateScore(pcSelection == Scissors);
                     break;
             }
         }
@@ -90,8 +82,18 @@ namespace GameRockPaperScissors
 
         private void SetSelection(Label lb, int num)
         {
-            lb.Text = (num == 1) ? "Scissors" : (num == 2) ? "Paper" : "Rock";
+            lb.Text = (num == Scissors) ? "Scissors" : (num == Paper) ? "Paper" : "Rock";
         }
 
+        private void restart_btn_Click(object sender, EventArgs e)
+        {
+            _pcScore = default;
+            _playerScore = default;
+            pc_score_label.Text = _pcScore.ToString();
+            player_score_label.Text = _playerScore.ToString();
+            result_label.Text = "RESULT";
+            player_choice_label.Text = "YOU";
+            pc_choice_label.Text = "PC";
+        }
     }
 }
